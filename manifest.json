@@ -3,6 +3,7 @@
     "version":"1.0",
     "manifest_version": 2,
     "description":"Croudiaでgoo.glで短縮されたURIを展開します。",
+    "homepage_url":"http://azyobuzin.github.com/CroudiaExpander/",
     "background":{"scripts":["jquery-1.9.1.min.js", "background.js"]},
     "content_scripts":[
         {
