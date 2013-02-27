@@ -1,0 +1,22 @@
+{
+    "name":"Croudia Expander",
+    "version":"1.0",
+    "manifest_version": 2,
+    "description":"Croudiaでgoo.glで短縮されたURIを展開します。",
+    "background":{"scripts":["jquery-1.9.1.min.js", "background.js"]},
+    "content_scripts":[
+        {
+            "matches":["https://croudia.com/voices/show/*"],
+            "js":["jquery-1.9.1.min.js", "content.js"],
+            "run_at":"document_end"
+        },
+        {
+            "matches":["https://croudia.com/*"],
+            "js":["jquery-1.9.1.min.js", "off_ajax_trans.js"],
+            "run_at":"document_end"
+        }
+    ],
+    "permissions":[
+        "https://www.googleapis.com/urlshortener/v1/*"
+    ]
+}
